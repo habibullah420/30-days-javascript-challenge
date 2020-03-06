@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>key detection system</title>
+
+    <script
+      type="text/javascript"
+      src="https://www.cornify.com/js/cornify.js"
+    ></script>
+  </head>
+  <body>
+    <script>
+      const arr = [];
+
+      const myarr = "habib";
+
+      window.addEventListener("keyup", e => {
+        console.log(e.key);
+        arr.push(e.key);
+        // console.log(arr)
+        arr.splice(-myarr.length - 1, arr.length - myarr.length);
+
+        if (arr.join("").includes(myarr)) {
+          console.log("Ding Ding");
+
+          cornify_add();
+        }
+        console.log(arr);
+      });
+    </script>
+  </body>
+</html>
